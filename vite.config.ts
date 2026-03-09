@@ -15,5 +15,6 @@ export default defineConfig({
     // host: "10.10.7.46",
     host: "187.124.7.226",
     port: 3014,
+    allowedHosts: ["dashboard.investors-hub.co.za"]
   },
 })
