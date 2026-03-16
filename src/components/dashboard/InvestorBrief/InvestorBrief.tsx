@@ -29,8 +29,7 @@ export default function InvestorBrief() {
   const [editingBrief, setEditingBrief] = useState<any | null>(null);
 
   const { data: briefData, isLoading } = useGetBriefsQuery({});
-  const briefs: any[] = briefData?.data || [];
-
+  const briefs: any[] = briefData?.data || [];  
   // Handlers
   const handleCreateNew = () => {
     setEditingBrief(null);
@@ -69,7 +68,7 @@ export default function InvestorBrief() {
           </p>
         </div>
 
-        <Button onClick={handleCreateNew} size="sm">
+        <Button onClick={handleCreateNew} size="lg">
           <Plus className="mr-2 h-4 w-4" />
           Create New Brief
         </Button>
@@ -107,7 +106,7 @@ function EmptyState({ onCreate }: { onCreate: () => void }) {
     <div className="text-center py-16">
       <FileText className="mx-auto h-16 w-16 text-gray-600 mb-4" />
       <p className="text-gray-400 mb-6">No briefs created yet</p>
-      <Button onClick={onCreate} size="sm">
+      <Button onClick={onCreate} size="lg">
         <Plus className="mr-2 h-4 w-4" />
         Create First Brief
       </Button>
